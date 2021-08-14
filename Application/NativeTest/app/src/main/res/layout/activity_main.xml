@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context="com.example.nativetest.MainActivity"
+                                                   tools:layout_editor_absoluteY="81dp">
+
+    <RadioGroup
+            android:id="@+id/apiSelectionGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp" android:layout_marginTop="108dp" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@+id/button_toggle_effect" app:layout_constraintVertical_bias="0.067">
+
+        <TextView
+                android:id="@+id/apiTextView"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="@string/apiSelection"/>
+        <RadioButton
+                android:id="@+id/slesButton"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sles"
+        />
+        <RadioButton
+                android:id="@+id/aaudioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aaudio"
+        />
+
+    </RadioGroup>
+    <Button
+            android:id="@+id/button_toggle_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:text="@string/start_effect"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.498" app:layout_constraintVertical_bias="0.834"/>
+    <TextView
+            android:id="@+id/status_view_text"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_group_margin"
+            android:lines="6"
+            android:text="@string/status_warning"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_toggle_effect"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.827"/>
+    <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/apiSelectionGroup"
+            android:layout_marginTop="30dp" android:id="@+id/tauSelectionGroup"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginRight="16dp" android:layout_marginEnd="16dp" android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp" android:checkedButton="@id/TauButton2" android:orientation="vertical">
+        <TextView
+                android:text="@string/tau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textTau"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/TauButton1" android:text="@string/tau1"/>
+        <RadioButton
+                android:text="@string/tau2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/TauButton2"/>
+        <RadioButton
+                android:text="@string/tau3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/TauButton3"/>
+        <RadioButton
+                android:text="@string/tau4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/TauButton4"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/TauField">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none|numberDecimal" android:id="@+id/input" android:text="@string/tau2"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </RadioGroup>
+    <com.google.android.material.chip.ChipGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tauSelectionGroup"
+            android:layout_marginTop="30dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp" android:layout_marginRight="16dp" android:layout_marginEnd="16dp"
+            android:id="@+id/nrSelection">
+
+        <TextView
+                android:text="@string/nrSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/nrText" android:paddingTop="13dp"/>
+        <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/nrSwitch" android:checked="true"/>
+    </com.google.android.material.chip.ChipGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
