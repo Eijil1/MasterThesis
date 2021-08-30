@@ -5,7 +5,7 @@ Source code from my master thesis on envelope enhancement for patients with audi
 ## Application
 
 The folder includes the apk of the application as well as the source code.
-To install the application, one should download the apk, open it and follow the instructions of the device to install (permissions to give and so on).
+To install the application, one should download the apk, open it and follow the instructions of the device to install (permissions to give and so on). A more detailed guide is also given.
 
 ## C++
 
